@@ -38,6 +38,6 @@ app.delete('/removestudent', (req, res) => {
 });
 
 // START THE EXPRESS SERVER
-app.listen(5000, () => {
+app.listen(5010, () => {
     console.log('EXPRESS Server Started at Port No: 5010');
 });
