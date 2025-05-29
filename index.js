@@ -1,37 +1,43 @@
 const e1 = require('express');
 const app = e1();
 
-//REG API
-app.post('/registration', (req, res) => {
-    res.send('<html><body>INSIDE REGISTRATION API..</body></html>');
+// LOGIN API
+app.post('/addassignment', (req, res) => {
+    res.send(`
+        <html>
+            <head><title>Add Assignment</title></head>
+            <body>
+                <h1>INSIDE ADD API</h1>
+            </body>
+        </html>
+    `);
 });
 
-app.post('/login', (req, res) => {
-    res.send('<html><body>INSIDE LOGIN API..</body></html>');
+// SEARCH API
+app.get('/searchstudent', (req, res) => {
+    res.send(`
+        <html>
+            <head><title>Search Student</title></head>
+            <body>
+                <h1>INSIDE SEARCH API</h1>
+            </body>
+        </html>
+    `);
 });
 
-//SEARCH API
-app.get('/search', (req, res) => {
-    res.send('<html><body>INSIDE SEARCH API..</body></html>');
+// DELETE API
+app.delete('/removestudent', (req, res) => {
+    res.send(`
+        <html>
+            <head><title>Remove Student</title></head>
+            <body>
+                <h1>INSIDE REMOVE API</h1>
+            </body>
+        </html>
+    `);
 });
 
-//VIEW API
-app.get('/view', (req, res) => {
-    res.send('<html><body>INSIDE VIEW API..</body></html>');
+// START THE EXPRESS SERVER
+app.listen(5000, () => {
+    console.log('EXPRESS Server Started at Port No: 5010');
 });
-
-//UPDATE API
-app.put('/updateprofile', (req, res) => {
-    res.send('<html><body>INSIDE UPDATE PROFILE API..</body></html>');
-});
-
-//DELETE API
-app.delete('/del', (req, res) => {
-    res.send('<html><body>INSIDE DELETE API..</body></html>');
-});
-
-// START THE EXPRESS SERVER. 5000 is the PORT NUMBER
-app.listen(5000, () =>
-    console.log('EXPRESS Server Started at Port No: 5000'));
-
-
